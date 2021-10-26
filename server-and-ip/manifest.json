@@ -1,0 +1,25 @@
+{
+  "name": "Server And IP",
+  "version": "1.0.0",
+  "description": "View IP address or alias and Server header",
+  "icons": {
+	  "16": "icon16.png",
+	  "48": "icon48.png",
+	  "128":"icon128.png"
+  },
+  "background": { "scripts": ["background.js"] },
+  "permissions": ["webRequest","<all_urls>","tabs"],
+  "options_page": "options.html",
+  "browser_action" : {
+	  "default_title"	: "ServerAndIP",
+	  "default_icon"	: {
+		  "19": "icon19.png",
+		  "38": "icon38.png"
+	  }
+  },
+  "content_scripts" :[{
+	  "matches"	: ["<all_urls>"],
+	  "js"		: ["hover-box.js"]
+  }],
+  "manifest_version": 2
+}
